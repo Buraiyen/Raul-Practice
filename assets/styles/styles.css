@@ -1,0 +1,159 @@
+body {
+    height: 100vh;
+    background-color: rgb(71, 19, 19);
+    
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #0D843D;
+    font-size: 1rem;
+}
+
+a:hover {
+    color: #075125;
+}
+
+.navBar {
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navBar .logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navBar .links {
+    display: flex;
+    gap: 2rem;
+}
+
+.actionBtn {
+    background-color: #FEDD00;
+    color: #00843C;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale 0.2 ease;
+}
+
+.actionBtn:hover {
+    color: #075125;
+    scale: 1.05;
+
+}
+
+.actionBtn:active {
+    scale: 0.95;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 30px;
+    height: 3px;
+    background-color: #0D843D;;
+    margin: 6px 0;
+    transition: 0.4s;
+    display: none;
+}
+  
+.change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+}
+  
+.change .bar2 {opacity: 0;}
+  
+.change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+}
+
+/* DROPDOWN MENU */
+.dropdownMenu {
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    width: 300px;
+    height: 0;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdownMenu.open {
+    height: 240px;
+    display: block;
+}
+
+.dropdownMenu li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdownMenu .actionBtn {
+    width: 80%;
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 10px;
+    justify-content: center;
+}
+
+/* HERO */
+section#hero {
+    height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+#hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+/* RESPONSIVE DESIGN */
+@media (max-width: 992px){
+    .navBar .links,
+    .navBar .actionBtn {
+        display:none;
+    }
+
+    .navBar .menuIcon{
+        display: block;
+    }
+
+    .dropdownMenu {
+        display: block;
+    }
+}
+
+@media (max-width: 576px) {
+    .dropdownMenu {
+        left: 2rem;
+        width: unset;
+    }
+
+    .bar1, .bar2, .bar3 {
+        display: block;
+    }
+}

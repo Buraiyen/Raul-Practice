@@ -1,7 +1,6 @@
 body {
     height: 100vh;
-    background-color: wheat;
-    
+    background-color: #FAF9F6;
 }
 
 li {
@@ -65,7 +64,7 @@ a:hover {
 .bar1, .bar2, .bar3 {
     width: 30px;
     height: 3px;
-    background-color: #0D843D;;
+    background-color: #0D843D;
     margin: 6px 0;
     transition: 0.4s;
     display: none;
@@ -126,13 +125,33 @@ section#hero {
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: white;
+    background-image: url('../media/banner.jpg');
+    background-repeat: no-repeat; 
+    background-position: center top;
 }
 
 #hero h1 {
     font-size: 3rem;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    color: white;
+    margin-top: -300px;
+    font-weight: bold;
+    backdrop-filter: blur(100px);
+    border-radius: 8px;
+    padding: 8px;
 }
+
+#hero p {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    backdrop-filter: blur(100px);
+    font-size: 1.5rem;
+    border-radius: 8px;
+    padding: 8px;
+    margin-top: 0px;
+}
+
 /* RESPONSIVE DESIGN */
 @media (max-width: 992px){
     .navBar .links,
@@ -140,7 +159,7 @@ section#hero {
         display:none;
     }
 
-    .navBar .menuIcon{
+    .bar1, .bar2, .bar3 {
         display: block;
     }
 
@@ -155,7 +174,5 @@ section#hero {
         width: unset;
     }
 
-    .bar1, .bar2, .bar3 {
-        display: block;
-    }
+    
 }

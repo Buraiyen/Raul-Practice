@@ -252,3 +252,9 @@ section#hero {
 
     
 }
+@media (min-width: 993px) {
+    .dropdownMenu.open {
+        display: none;
+    }
+
+}

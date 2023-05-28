@@ -88,11 +88,11 @@ a:hover {
     top: 60px;
     width: 300px;
     height: 0;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(15px);
+    background: rgba(194, 194, 194, 1.0);
     border-radius: 10px;
     overflow: hidden;
     transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 9999;
 }
 
 .dropdownMenu.open {
@@ -152,6 +152,30 @@ section#hero {
     margin-top: 0px;
 }
 
+#hero .actionBtn {
+    width: 100px;
+    font-size: 1rem;
+}
+
+#heroSec {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    margin-top: -250px;
+}
+
+.heroImgs img {
+    width: 150px;
+    max-height: 200px;
+    object-fit: cover;
+    margin: 10px;
+}
+
+.heroImgs h2 {
+    color: #0D843D;
+}
 /* RESPONSIVE DESIGN */
 @media (max-width: 992px){
     .navBar .links,
@@ -165,6 +189,19 @@ section#hero {
 
     .dropdownMenu {
         display: block;
+    }
+
+    section#hero {
+        background-position: right top;
+
+    }
+
+    #hero h1 {
+        font-size: 1.4rem;
+    }
+
+    #hero p {
+        font-size: 1rem;
     }
 }
 
